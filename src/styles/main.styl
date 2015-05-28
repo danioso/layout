@@ -1,0 +1,33 @@
+@require 'layout/normalize'
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.app 
+  
+  height 100%
+    
+  /* Layout */
+  @require 'layout/header'
+  @require 'layout/body'
+  @require 'layout/footer'
+  @require 'layout/utils'
+  
+  /* Style */
+  @require 'style/header'
+  @require 'style/body'
+  @require 'style/footer'
+  @require 'style/utils'
+
+/* Layout */
+.with-footer
+  .body
+    bottom 40px 
+
+/* Style */
+.with-footer
+  .footer
+    box-shadow 0 -5px 5px rgba(0,0,0,.05)
+    border-top 1px solid #ddd 
+  

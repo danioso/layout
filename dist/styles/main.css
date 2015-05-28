@@ -1,0 +1,404 @@
+/**
+ * layout - Simple and useful backend layout for any kind of project.
+ * @version v0.0.1
+ * @link https://github.com/danioso/layout
+ * @license MIT © Daniel Osorio <danosot@gmail.com>
+ */
+/* normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+body {
+  margin: 0;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+[hidden],
+template {
+  display: none;
+}
+a {
+  background-color: transparent;
+}
+a:active,
+a:hover {
+  outline: 0;
+}
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+b,
+strong {
+  font-weight: bold;
+}
+dfn {
+  font-style: italic;
+}
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+mark {
+  background: #ff0;
+  color: #000;
+}
+small {
+  font-size: 80%;
+}
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+img {
+  border: 0;
+}
+svg:not(:root) {
+  overflow: hidden;
+}
+figure {
+  margin: 1em 40px;
+}
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+pre {
+  overflow: auto;
+}
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+button {
+  overflow: visible;
+}
+button,
+select {
+  text-transform: none;
+}
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+input {
+  line-height: normal;
+}
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  box-sizing: content-box; /* 2 */
+}
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+textarea {
+  overflow: auto;
+}
+optgroup {
+  font-weight: bold;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+td,
+th {
+  padding: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+.app {
+  height: 100%;
+/* Layout */
+/* Style */
+}
+.app .header {
+  height: 60px;
+  width: 100%;
+  top: 0px;
+  left: 0px;
+  position: fixed;
+  padding: 5px 20px;
+  z-index: 2;
+}
+.app .header nav {
+  background: #f00;
+}
+.app .header nav ul {
+  height: 50px;
+  float: right;
+}
+.app .header nav ul li {
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  margin-left: 20px;
+}
+.app .body {
+  width: 100%;
+  top: 60px;
+  left: 0px;
+  bottom: 0px;
+  position: fixed;
+}
+.app .body .sidebar {
+  width: 200px;
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 20px;
+}
+.app .body .main {
+  float: left;
+  position: absolute;
+  left: 200px;
+  top: 0px;
+  bottom: 0px;
+  right: 0px;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 0 0 0 0;
+}
+.app .body .details {
+  width: 500px;
+  float: right;
+  height: 100%;
+  overflow: hidden;
+  overflow-y: auto;
+  padding: 20px;
+  position: relative;
+  z-index: 11;
+}
+.app .with-nav {
+  padding-top: 50px !important;
+}
+.app .with-nav nav {
+  position: fixed;
+  margin-top: -50px;
+  height: 50px;
+  left: 200px;
+  right: 0px;
+  background: #f7f7f7;
+  padding: 5px 20px 0 20px;
+  border-bottom: 1px solid #ddd;
+  z-index: 10;
+  margin-left: 1px;
+}
+.app .with-nav nav ul li {
+  height: 40px;
+  line-height: 40px;
+  float: left;
+  margin-left: 10px;
+}
+.app .with-nav nav ul li:first-of-type {
+  margin-left: 0px;
+}
+.app .with-details .sidebar {
+  width: 200px;
+}
+.app .with-details .main {
+  right: 60% !important;
+}
+.app .with-details .with-nav nav {
+  right: 60%;
+}
+.app .with-details .with-nav .pull-left {
+  display: none;
+}
+.app .with-details .details {
+  width: 60% !important;
+}
+.app .with-details .details nav {
+  left: 40%;
+  right: 0px;
+}
+.app .footer {
+  width: 100%;
+  height: 40px;
+  bottom: 0px;
+  left: 0px;
+  position: fixed;
+  padding: 0px 20px 0px 20px;
+  line-height: 40px;
+}
+.app .logo {
+  display: block;
+  width: 160px;
+  height: 50px;
+  line-height: 50px;
+}
+.app table {
+  width: 100%;
+}
+.app .text-left {
+  text-align: left;
+}
+.app .text-center {
+  text-align: center;
+}
+.app .text-right {
+  text-align: right;
+}
+.app .pull-right {
+  float: right;
+}
+.app .pull-left {
+  float: left;
+}
+.app .list-unstyled {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+.app .row .col {
+  float: left;
+}
+.app .row .size-10 {
+  width: 10%;
+}
+.app .row .size-20 {
+  width: 20%;
+}
+.app .row .size-30 {
+  width: 30%;
+}
+.app .row .size-40 {
+  width: 40%;
+}
+.app .row .size-50 {
+  width: 50%;
+}
+.app .row .size-60 {
+  width: 60%;
+}
+.app .row .size-70 {
+  width: 70%;
+}
+.app .row .size-80 {
+  width: 80%;
+}
+.app .row .size-90 {
+  width: 90%;
+}
+.app .row .size-100 {
+  width: 100%;
+}
+.app .row:after {
+  content: ' ';
+  display: block;
+  width: 100%;
+  clear: both;
+}
+.app .header {
+  box-shadow: 0 5px 5px rgba(0,0,0,0.05);
+  border-bottom: 1px solid #ddd;
+}
+.app .body .sidebar {
+  background: #eee;
+  border-right: 1px solid #ddd;
+}
+.app .body .details {
+  background: #fff;
+  box-shadow: -5px 0 5px rgba(0,0,0,0.1);
+}
+.app tr:hover td {
+  background: #eee;
+}
+.app a {
+  color: #00a9e0;
+  text-decoration: none;
+  transition: color 0.15s linear;
+}
+.app a:hover {
+  color: #0087b3;
+}
+/* Layout */
+.with-footer .body {
+  bottom: 40px;
+}
+/* Style */
+.with-footer .footer {
+  box-shadow: 0 -5px 5px rgba(0,0,0,0.05);
+  border-top: 1px solid #ddd;
+}
