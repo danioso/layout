@@ -2,6 +2,8 @@
 
 Simple and useful html layout for any kind of project.
 
+![Layout screenshot](src/images/layout.png)
+
 ```shell
 # Install
 $ npm install
